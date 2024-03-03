@@ -1,0 +1,35 @@
+cabal-version:       3.4
+name:                xmobar-aster
+version:             0.1.0.0
+
+library archupdates
+  build-depends: base
+               , xmobar
+               , xmonad-contrib
+               , flow
+  exposed-modules: ArchUpdates
+
+library marquee
+  build-depends: base
+               , xmobar
+               , mtl
+  exposed-modules: Marquee
+
+library utils
+  build-depends: base
+               , xmonad-contrib
+  exposed-modules: Utils
+
+executable xmobar
+  main-is: xmobar.hs
+  other-modules: ArchUpdates
+               , Marquee
+               , Utils
+  build-depends: base
+               , xmobar >= 0.47.4
+               , xmonad
+               , xmonad-contrib
+               , flow
+               , ghc
+               , mtl
+               , transformers

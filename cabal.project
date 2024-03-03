@@ -1,0 +1,10 @@
+packages: . /home/enrico/xmobar
+
+-- Leave out if you don't care about the compiler version.
+with-compiler: ghc-9.4.8
+
+-- Note the package in this stanza is xmobar, the library dependency,
+-- and not xmobar-aster, the executable with the configuration.
+-- See the xmobar Hackage docs for the list of flags.
+package xmobar
+  flags: +all_extensions
